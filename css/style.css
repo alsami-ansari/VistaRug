@@ -623,9 +623,13 @@ color-mix(in srgb, rgba(255, 255, 255, 0.7), transparent 90%);
   box-shadow: none;
 }
 
-.margin-T{
-    margin-left: 100px;
+@media (min-width: 992px) {
+    .margin-T{
+        /* margin-left: 100px; */
+        margin-left: 8.33333333%;
+    }
 }
+
 
 .margin-T p{
     color: black;
@@ -649,7 +653,7 @@ color-mix(in srgb, rgba(255, 255, 255, 0.7), transparent 90%);
 .margin-T{
 
   margin-top: 4rem !important;
-  margin-left: 0;
+  
 }
 
 .contact-us p{
