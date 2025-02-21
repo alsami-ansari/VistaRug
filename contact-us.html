@@ -73,30 +73,30 @@
       <div class="col-lg-7">
           
           <p>Contact us about anything related to our company or services. <br>We'll do our best to get back to you as soon as possible.</p>
-          <form class="form-container" action="https://formspree.io/f/xkgovdyz" method="post">
+          <form class="form-container" id="contactForm">
               <div class="row mb-3">
                   <div class="col-md-6 margin-B">
                       <label class="form-label">Name *</label>
-                      <input type="text" name="Name" class="form-control" required>
+                      <input type="text" name="Name" id="name" class="form-control" required>
                   </div>
                   <div class="col-md-6">
                       <label class="form-label">Phone Number *</label>
-                      <input type="text" name="Number" class="form-control" required>
+                      <input type="text" name="Number" id="number" class="form-control" required>
                   </div>
               </div>
               <div class="row mb-3">
                   <div class="col-md-6 margin-B">
                       <label class="form-label">Email *</label>
-                      <input type="email" name="Email" class="form-control" required>
+                      <input type="email" name="Email" id="email" class="form-control" required>
                   </div>
                   <div class="col-md-6">
                       <label class="form-label">Pincode *</label>
-                      <input type="text" name="Pincode" class="form-control" required>
+                      <input type="text" name="Pincode" id="pincode" class="form-control" required>
                   </div>
               </div>
               <div class="mb-3">
                   <label class="form-label">Description *</label>
-                  <input type="text" name="Description" class="form-control" required>
+                  <input type="text" name="Description" id="description" class="form-control" required>
               </div>
               <button type="submit" class="btn submit-btn">Submit</button>
           </form>
@@ -161,8 +161,31 @@
 </div>
 </footer>
 
+
+
 <!-- footer end -->
+
+<!-- Custom Alert -->
+<div id="customAlert" class="custom-alert">
+  <span id="customAlertMessage"></span>
+</div>
+
+<!--  -->
+
+
 <script src="css/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="js/main.js"></script>
+
+
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init({
+        publicKey: "0TbsHUi_0vgy3CnFo",
+      });
+   })();
+</script>
+<script src="js/main.js"></script>
 </body>
 </html>
